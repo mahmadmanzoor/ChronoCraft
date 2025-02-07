@@ -10,7 +10,9 @@ import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 
 const Create = () => {
-//logic here
+  const {data: session} = useSession();
+  const router = useRouter();
+  const id = session?.user?._id;
 
   const [imageUrls, setImageUrls] = useState([
     "https://res.cloudinary.com/dvjs0xmcy/image/upload/v1722781351/eagefvawsxsib8o4wjrs.jpg",
@@ -48,7 +50,45 @@ const Create = () => {
     water: "5 ATM",
   });
 
-  //logic here
+  const handleChange = (e)=> {
+    const {name, value}= e.target;
+    setProduct((prevState)=> ({
+        ...prevState, [name]: value
+    }))
+
+  };
+
+  const handleUpload = (result)=> {
+    if(result.event === "success"){
+        const newUrl = result.info.secure_url;
+        setImageUrls((prevUrls)=> [...prevUrls, newUrl]);
+
+    }
+  }
+
+
+  const handleRemoveImage = (e, urlToRemove)=> {
+    e.preventDefault();
+    setImageUrls((prevUrls)=> prevUrls.filter((url)=> url !== urlToRemove));
+  }
+
+  const handleSubmit = async (e)=> {
+    e.preventDefault();
+      if(imageUrls.length > 0){
+        try {
+            const productData = {
+                ...product, images: imageUrls
+            };
+            const productRes = await axios.post("/api/products", productData);
+            if(productRes.status === 200 || productRes.status === 201){
+                router.push("/")
+            }
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white py-12 px-4 sm:px-6 lg:px-8">

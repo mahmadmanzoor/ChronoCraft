@@ -7,24 +7,26 @@ import Footer from "@/components/Footer/Footer";
 const mulsih = Mulish({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
-const playfair = Playfair_Display({subsets:["latin"]})
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "EcommerceApp",
-  description: "Ecommerce Store that sells Watches!",
+  title: "ChronoCraft",
+  description: "ChronoCraft is a brand that sells premium watches",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}
-      suppressContentEditableWarning
-      suppressHydrationWarning>
+      <body
+        className={poppins.className}
+        suppressContentEditableWarning
+        suppressHydrationWarning
+      >
         <AuthProvider>
-          <Navbar/>
+          <Navbar />
           {children}
-          <Footer/>
-          </AuthProvider>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

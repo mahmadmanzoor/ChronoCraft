@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
           <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold mb-4">1. Introduction</h2>
             <p className="mb-6">
-              At ChronoCraft, we are committed to protecting your privacy and
+              At Chronocraft, we are committed to protecting your privacy and
               ensuring the security of your personal information. This Privacy
               Policy outlines how we collect, use, disclose, and safeguard your
               data when you visit our website or make a purchase.
@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
               contact us at:
             </p>
             <address className="not-italic mb-6">
-              ChronoCraft
+              Chronocraft
               <br />
               123 Watch Street
               <br />

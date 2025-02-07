@@ -12,7 +12,15 @@ const CartIconNav = () => {
   const { items, getTotalItems } = useCartStore();
   const [cart, setCart] = useState(false);
 
-  
+  useEffect(() => {
+    setIsLoading(false);
+    setItemCount(getTotalItems());
+  }, [items, getTotalItems]);
+
+  if (isLoading) {
+    return null; // Or a loading placeholder if you prefer
+  }
+
   return (
     <div
       onClick={() => setCart(!cart)}

@@ -121,7 +121,18 @@ const BestSellingWatches = () => {
     setWatches(fetchedWatches);
   }, []);
 
-  //logic here
+  const nextWatch = () =>
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % watches.length);
+  const prevWatch = () =>
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + watches.length) % watches.length
+    );
+  const getWatchIndex = (offset) =>
+    (currentIndex + offset + watches.length) % watches.length;
+
+  if (watches.length === 0) {
+    return null;
+  }
 
   return (
     <section className="py-8 md:py-16 bg-gray-100">
