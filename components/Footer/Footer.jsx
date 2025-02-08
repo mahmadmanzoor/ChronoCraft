@@ -38,7 +38,7 @@ const Footer = () => {
           {/* Brand and description */}
           <div className="space-y-4">
             <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
-              EcommStore
+              ChronoCraft
             </h2>
             <p className="text-gray-300">
               Crafting timeless elegance for the modern connoisseur.

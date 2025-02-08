@@ -19,7 +19,7 @@ const ContactPage = () => {
       <header className="bg-blue-600 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Contact EcomWatch
+            Contact ChronoCraft
           </h1>
           <p className="text-xl md:text-2xl mb-8">
             We're Here to Help with Your Watch Needs
@@ -28,7 +28,7 @@ const ContactPage = () => {
             width={800}
             height={400}
             src={ContactHero}
-            alt="EcomWatch support team"
+            alt="ChronoCraft support team"
             className="rounded-lg shadow-lg mx-auto"
           />
         </div>
@@ -54,7 +54,7 @@ const ContactPage = () => {
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
               <Mail className="w-12 h-12 mx-auto mb-4 text-blue-600" />
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-              <p>support@ecomwatch.com</p>
+              <p>support@chronocraft.com</p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
               <Clock className="w-12 h-12 mx-auto mb-4 text-blue-600" />
@@ -160,7 +160,7 @@ const ContactPage = () => {
       <section className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Stay Updated with EcomWatch
+            Stay Updated with ChronoCraft
           </h2>
           <p className="text-xl mb-8">
             Subscribe to our newsletter for the latest watch news and exclusive
